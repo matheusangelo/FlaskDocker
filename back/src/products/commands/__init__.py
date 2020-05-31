@@ -1,0 +1,1 @@
+from .produtcs import Product

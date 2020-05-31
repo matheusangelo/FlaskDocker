@@ -1,0 +1,14 @@
+version: '3'
+services:
+    db:
+        image: mongo
+        restart: always
+        ports: 
+            - "27017:27017"
+    backend:
+        build: "./back"
+        container_name: 'api_flask'
+        ports: 
+            - "8000:8000"
+        depends_on: 
+            - db
